@@ -3,12 +3,31 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 <body>
-<div class="w3-sidebar w3-bar-block" style="width:25%">
-  <a class="w3-bar-item w3-button" href="index.html">Home</a>
-  <a class="w3-bar-item w3-button" href="releases.html">Releases</a>
+<div class="w3-sidebar w3-bar-block w3-collapse w3-card" style="width:200px;" id="mySidebar">
+  <button class="w3-bar-item w3-button w3-hide-large"
+  onclick="w3_close()">Close &times;</button>  <a class="w3-bar-item w3-button" href="index.html">Home</a>
+  <a class="w3-bar-item w3-button" href="https://github.com/phpvirtualbox/phpvirtualbox/releases">Releases</a>
   <a class="w3-bar-item w3-button" href="https://github.com/phpvirtualbox/phpvirtualbox/wiki">Wiki</a>
   <a class="w3-bar-item w3-button" href="https://github.com/phpvirtualbox/phpvirtualbox/issues">Issues</a>
   <a class="w3-bar-item w3-button" href="about.html">About</a>
 </div>
+<div class="w3-main" style="margin-left:200px">
+
+<div class="w3-teal">
+  <button class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
+  <div class="w3-container">
+    <h1>phpVirtualBox</h1>
+  </div>
+  </div>
+</div>
+
+<script>
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
 </body>
 </html>
