@@ -12,22 +12,27 @@
   <a class="w3-bar-item w3-button" href="https://github.com/phpvirtualbox/phpvirtualbox/issues">Issues</a>
   <a class="w3-bar-item w3-button" href="about.html">About</a>
 </div>
-<div class="w3-main" style="margin-left:200px">
+<div class="w3-main" style="margin-left:200px" id="main">
 
-<div class="w3-teal">
-  <button class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
-  <div class="w3-container">
-    <h1>phpVirtualBox</h1>
-  </div>
+  <div class="w3-teal">
+    <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
+    <div class="w3-container">
+      <h1>phpVirtualBox</h1>
+    </div>
   </div>
 </div>
 
 <script>
 function w3_open() {
+  document.getElementById("main").style.marginLeft = "25%";
+  document.getElementById("mySidebar").style.width = "25%";
   document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("openNav").style.display = 'none';
 }
 function w3_close() {
+  document.getElementById("main").style.marginLeft = "0%";
   document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("openNav").style.display = "inline-block";
 }
 </script>
 </body>
